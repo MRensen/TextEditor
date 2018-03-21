@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Label?>
+<BorderPane fx:id="BorderPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+          <Menu text="File">
+              <MenuItem fx:id="close" text="Close" onAction="#onClose"/>
+              <MenuItem fx:id="save" text="Save" onAction="#onSave" />
+              <MenuItem fx:id="saveAs" text="SaveAs" onAction="#onSaveAs" />
+              <MenuItem fx:id="load" text="Load" onAction="#onLoad" />
+          </Menu>
+
+          <Menu text="Edit">
+              <MenuItem fx:id="delete" text="Delete" onAction="#onDelete"/>
+          </Menu>
+
+          <Menu text="Help">
+              <MenuItem fx:id="about" text="About" onAction="#onAbout"/>
+          </Menu>
+      </MenuBar>
+   </top>
+
+    <center>
+        <TextArea fx:id="textArea" prefHeight="200.00" prefWidth="200.00" BorderPane.alignment="CENTER" />
+    </center>
+
+    <bottom>
+        <HBox prefHeight="20.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <Label fx:id="bottomLabel"></Label>
+        </HBox>
+    </bottom>
+
+</BorderPane>
