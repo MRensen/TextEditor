@@ -30,4 +30,6 @@ public class EditorModel {
     public void close(){
         System.exit(0);
     }
+
+
 }

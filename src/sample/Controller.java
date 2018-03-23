@@ -17,6 +17,8 @@ import java.util.Optional;
 public class Controller {
     @FXML
     private TextArea textArea;
+    @FXML private ToggleButton bold;
+    @FXML private ToggleButton italic;
 
     @FXML
     private Label bottomLabel;
@@ -104,5 +106,20 @@ public class Controller {
 
     }
 
+    @FXML public void onBold(){
+        if(bold.isSelected()) {
+            textArea.setStyle("-fx-font-weight : bold");
+        } else {
+            textArea.setStyle("-fx-font-weight : normal");
+        }
+    }
+
+    @FXML public void onItalic(){
+        if(italic.isSelected()){
+            textArea.setStyle("-fx-font-style : italic");
+        } else {
+            textArea.setStyle("-fx-font-style : normal");
+        }
+    }
 
 }
