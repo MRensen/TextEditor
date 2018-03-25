@@ -11,6 +11,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
+<?import javafx.scene.web.HTMLEditor?>
 <BorderPane fx:id="BorderPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <top>
        <SplitPane dividerPositions="0.5" orientation="VERTICAL">
@@ -32,8 +33,10 @@
       </MenuBar>
            <ButtonBar>
                <buttons>
-                   <ToggleButton fx:id="bold" text="Bold" onAction="#onBold"/>
-                   <ToggleButton fx:id="italic" text="Italic" onAction="#onItalic" />
+                   <ToggleButton fx:id="bold" onAction="#onBold" text="Bold" />
+                   <ToggleButton fx:id="italic" onAction="#onItalic" text="Italic" />
+                   <ToggleButton fx:id="strikeThrough" onAction="#onStrikeThrough" text="StrikeThrough" />
+                   <ToggleButton fx:id="underline" onAction="#onUnderline" text="Underline" />
                </buttons>
 
 
@@ -43,6 +46,7 @@
 
     <center>
         <TextArea fx:id="textArea" prefHeight="200.00" prefWidth="200.00" BorderPane.alignment="CENTER" />
+        <!--<HTMLEditor fx:id="HTMLEditor" />-->
     </center>
 
     <bottom>

@@ -32,8 +32,10 @@
       </MenuBar>
            <ButtonBar>
                <buttons>
-                   <ToggleButton fx:id="bold" text="Bold" onAction="#onBold"/>
-                   <ToggleButton fx:id="italic" text="Italic" onAction="#onItalic" />
+                   <ToggleButton fx:id="bold" onAction="#onBold" text="Bold" />
+                   <ToggleButton fx:id="italic" onAction="#onItalic" text="Italic" />
+                   <ToggleButton fx:id="strikeThrough" onAction="#onStrikeThrough" text="StrikeThrough" />
+                   <ToggleButton fx:id="underline" onAction="#onUnderline" text="Underline" />
                </buttons>
 
 

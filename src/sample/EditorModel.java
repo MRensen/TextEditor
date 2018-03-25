@@ -1,5 +1,8 @@
 package sample;
 
+import javafx.scene.control.TextArea;
+import javafx.scene.control.ToggleButton;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -29,6 +32,14 @@ public class EditorModel {
 
     public void close(){
         System.exit(0);
+    }
+
+    public void styleSetter(ToggleButton tb, TextArea ta , String on, String off){
+        if(tb.isSelected()) {
+            ta.setStyle(on);
+        } else {
+            ta.setStyle(off);
+        }
     }
 
 

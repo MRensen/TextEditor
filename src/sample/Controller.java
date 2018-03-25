@@ -19,6 +19,8 @@ public class Controller {
     private TextArea textArea;
     @FXML private ToggleButton bold;
     @FXML private ToggleButton italic;
+    @FXML private ToggleButton underline;
+    @FXML private ToggleButton strikeThrough;
 
     @FXML
     private Label bottomLabel;
@@ -29,6 +31,8 @@ public class Controller {
     public Controller(EditorModel model){
         this.model = model;
     }
+
+
 
     @FXML
     public void onLoad(){
@@ -107,19 +111,19 @@ public class Controller {
     }
 
     @FXML public void onBold(){
-        if(bold.isSelected()) {
-            textArea.setStyle("-fx-font-weight : bold");
-        } else {
-            textArea.setStyle("-fx-font-weight : normal");
-        }
+        model.styleSetter(bold, textArea, "-fx-font-weight: bold", "-fx-font-weight: normal");
     }
 
     @FXML public void onItalic(){
-        if(italic.isSelected()){
-            textArea.setStyle("-fx-font-style : italic");
-        } else {
-            textArea.setStyle("-fx-font-style : normal");
-        }
+        model.styleSetter(italic, textArea, "-fx-font-style: italic", "-fx-font-style: normal");
+    }
+
+    @FXML public void onStrikeThrough(){
+        model.styleSetter(strikeThrough, textArea, "-fx-strikethrough: true", "-fx-strikethrough: false");
+    }
+
+    @FXML public void onUnderline(){
+        model.styleSetter(underline, textArea, "-fx-underline: true", "-fx-underline: false");
     }
 
 }
